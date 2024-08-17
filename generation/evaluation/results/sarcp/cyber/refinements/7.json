@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "Usually, people are allowed to send their submission by email.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "people",
+                "action": "send",
+                "resource": "submission",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "people",
+                "action": "send",
+                "resource": "submission",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,0 +1,1 @@
+[{"nlacp": "The PC chair appoints the PC members.", "truth": [{"decision": "allow", "subject": "pc chair", "action": "appoint", "resource": "pc member", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "pc chair", "action": "appoint", "resource": "pc member", "condition": "none", "purpose": "none"}], "verification": "correct"}]

@@ -1,0 +1,1 @@
+[{"nlacp": "HCPs can return to an office visit.", "truth": [{"decision": "allow", "subject": "hcp", "action": "return", "resource": "office visit", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "hcp", "action": "return", "resource": "office visit", "condition": "none", "purpose": "none"}], "verification": "correct"}]

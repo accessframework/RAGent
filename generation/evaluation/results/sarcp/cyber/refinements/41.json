@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "In case the \u2019expertise-value\u2019 is equal, the reviewer with the least number of papers assigned so far \u2019gets\u2019 the paper.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "get",
+                "resource": "paper",
+                "condition": "expertisevalue is equal",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "get",
+                "resource": "paper",
+                "condition": "expertisevalue is equal",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

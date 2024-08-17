@@ -1,0 +1,1 @@
+[{"nlacp": "Clerk can read from database.", "truth": [{"decision": "allow", "subject": "clerk", "action": "read", "resource": "database", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "clerk", "action": "read", "resource": "database", "condition": "none", "purpose": "none"}], "verification": "correct"}]

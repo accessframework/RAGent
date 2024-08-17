@@ -1,0 +1,67 @@
+[
+    {
+        "nlacp": "You can submit reviews and find out what happens.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "you",
+                "action": "find",
+                "resource": "what happen",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "you",
+                "action": "submit",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "you",
+                "action": "submit",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "you",
+                "action": "find",
+                "resource": "picture",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cres"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "you",
+                "action": "submit",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "you",
+                "action": "find",
+                "resource": "what happens",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

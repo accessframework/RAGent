@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "This is used to discover papers that have only been reviewed by non-experts, so that the PCC may ask another reviewer to review the paper.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "discover",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "pcc may ask another reviewer to review the paper"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "use",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "pcc may ask another reviewer to review the paper"
+            }
+        ],
+        "verification": "correct"
+    }
+]

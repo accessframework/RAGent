@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "The 4 reviewers with the least number of papers assigned so far \u2019get\u2019 the paper.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "get",
+                "resource": "paper",
+                "condition": "reviewer is assigned with the least number of papers so far",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "get",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

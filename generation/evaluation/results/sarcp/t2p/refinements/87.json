@@ -1,0 +1,1 @@
+[{"nlacp": "The patient can add the HCP to their list of providers.", "truth": [{"decision": "allow", "subject": "patient", "action": "add", "resource": "hcp", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "patient", "action": "add", "resource": "hcp", "condition": "none", "purpose": "none"}], "verification": "correct"}]

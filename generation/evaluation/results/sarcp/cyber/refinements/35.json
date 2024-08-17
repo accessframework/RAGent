@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "To be able to protect the reviews from outsiders, each reviewer gets his or her own directory on the webserver.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "get",
+                "resource": "directory",
+                "condition": "none",
+                "purpose": "be able to protect the reviews from outsider"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "get",
+                "resource": "directory",
+                "condition": "none",
+                "purpose": "be able to protect the reviews from outsider"
+            }
+        ],
+        "verification": "correct"
+    }
+]

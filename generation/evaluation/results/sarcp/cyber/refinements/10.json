@@ -1,0 +1,67 @@
+[
+    {
+        "nlacp": "CyberChair points out conflicting reviews and offers the reviewers means to easily communicate to solve these conflicts.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "offer",
+                "resource": "mean to easily communicate",
+                "condition": "none",
+                "purpose": "solve these conflict"
+            },
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "point",
+                "resource": "conflicting review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "offer",
+                "resource": "preference",
+                "condition": "none",
+                "purpose": "solve these conflict"
+            },
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "point out",
+                "resource": "conflicting review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cres"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "offer",
+                "resource": "means",
+                "condition": "none",
+                "purpose": "solve these conflict"
+            },
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "point out",
+                "resource": "conflicting review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

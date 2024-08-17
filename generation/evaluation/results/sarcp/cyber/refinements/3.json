@@ -1,0 +1,43 @@
+[
+    {
+        "nlacp": "As soon as the full paper deadline has passed, the papers can be assigned to the reviewers.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "assign",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "assign",
+                "resource": "paper",
+                "condition": "one week before the full paper is submitted",
+                "purpose": "none"
+            }
+        ],
+        "verification": "ccond"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "assign",
+                "resource": "paper",
+                "condition": "full paper deadline has passed",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "For each paper that a reviewer would like to review, the corresponding checkbox in the left part of the window should be marked.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "mark",
+                "resource": "checkbox",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "mark",
+                "resource": "checkbox",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "The level of agreement among reviewers is indicated on each reviewer's personal page, using a coloring scheme.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "indicate",
+                "resource": "level of agreement",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "indicate",
+                "resource": "level of agreement",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

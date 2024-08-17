@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "Following Nierstrasz\u2019s pattern Make Champions Explicit , the reviewers are asked to fill in the classification of papers on the review form.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "fill",
+                "resource": "classification",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "fill in",
+                "resource": "classification",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

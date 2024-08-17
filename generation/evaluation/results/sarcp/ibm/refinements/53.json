@@ -1,0 +1,1 @@
+[{"nlacp": "The Registrar verifies the deletion.", "truth": [{"decision": "allow", "subject": "registrar", "action": "verify", "resource": "deletion", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "registrar", "action": "verify", "resource": "deletion", "condition": "none", "purpose": "none"}], "verification": "correct"}]

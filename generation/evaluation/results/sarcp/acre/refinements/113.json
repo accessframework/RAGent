@@ -1,0 +1,1 @@
+[{"nlacp": "The user is prompted to try again.", "truth": [{"decision": "allow", "subject": "user", "action": "try", "resource": "again", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "user", "action": "try", "resource": "again", "condition": "none", "purpose": "none"}], "verification": "correct"}]

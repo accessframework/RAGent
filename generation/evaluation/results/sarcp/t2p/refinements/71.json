@@ -1,0 +1,1 @@
+[{"nlacp": "An HCP creates patients.", "truth": [{"decision": "allow", "subject": "hcp", "action": "create", "resource": "patient", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "hcp", "action": "create", "resource": "patient", "condition": "none", "purpose": "none"}], "verification": "correct"}]

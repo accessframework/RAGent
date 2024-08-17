@@ -1,0 +1,1 @@
+[{"nlacp": "The patient can select a diagnosis.", "truth": [{"decision": "allow", "subject": "patient", "action": "select", "resource": "diagnosi", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "patient", "action": "select", "resource": "diagnosi", "condition": "none", "purpose": "none"}], "verification": "correct"}]

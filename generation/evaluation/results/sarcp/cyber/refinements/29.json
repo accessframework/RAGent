@@ -1,0 +1,45 @@
+[
+    {
+        "nlacp": "Authors can submit their abstracts and papers using the web (uploading).",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "submit",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "submit",
+                "resource": "abstract",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "submit",
+                "resource": "abstract",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "submit",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

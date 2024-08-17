@@ -1,0 +1,45 @@
+[
+    {
+        "nlacp": "Reviews can either be submitted via a webpage, or filled in off-line and emailed.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "fill",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "submit",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "submit",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "fill in",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

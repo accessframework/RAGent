@@ -2,10 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+checkpoints
+generation/evaluation/results/sarcp_old/
+generation/evaluation/results/test_with_act/
+generation/evaluation/results/test*/
+generation/evaluation/results/*.txt
+generation/misc
 # C extensions
 *.so
-
+demo/results
+demo/demoenv
 # Distribution / packaging
 .Python
 build/

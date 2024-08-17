@@ -1,0 +1,1 @@
+[{"nlacp": "The system deletes the Schedule.", "truth": [{"decision": "allow", "subject": "system", "action": "delete", "resource": "schedule", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "delete", "resource": "schedule", "condition": "none", "purpose": "none"}], "verification": "correct"}]

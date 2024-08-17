@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "The review process can be monitored by the chair.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "chair",
+                "action": "monitor",
+                "resource": "review process",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "chair",
+                "action": "monitor",
+                "resource": "review process",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

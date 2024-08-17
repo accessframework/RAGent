@@ -1,0 +1,127 @@
+
+ =========================== Training details =========================== 
+
+Base model: bart
+Dataset: ../data/verification/verification_dataset_json_sent.csv
+Num. of classes: 12
+Num. of epochs: 10
+Learning rate: 2e-05
+Batch size: 8
+Checkpoint dir.: ../checkpoints/verification_json/bart/sent_kfold
+
+ ======================================================================= 
+
+> Training :: Fold 1 :: Seed 20 :: ../checkpoints/verification_json/bart/sent_kfold/1
+> Evaluating :: Fold 1
+
+ID: 0
+
+              precision    recall  f1-score   support
+
+    negative       0.68      0.59      0.63       224
+    positive       0.97      0.98      0.97      2738
+
+    accuracy                           0.95      2962
+   macro avg       0.83      0.78      0.80      2962
+weighted avg       0.95      0.95      0.95      2962
+
+
+MCC: 0.6074195601183525
+
+              precision    recall  f1-score   support
+
+           0       0.92      0.89      0.90       246
+           1       1.00      0.95      0.97       270
+           2       0.99      0.97      0.98       261
+           3       0.98      0.97      0.98       267
+           4       1.00      0.97      0.98       240
+           5       1.00      0.97      0.98       236
+           6       0.99      0.97      0.98       239
+           7       0.97      0.99      0.98       201
+           8       0.94      0.92      0.93       278
+           9       0.79      0.97      0.87       260
+          10       0.76      0.82      0.79       240
+          11       0.68      0.59      0.63       224
+
+    accuracy                           0.92      2962
+   macro avg       0.92      0.91      0.92      2962
+weighted avg       0.92      0.92      0.92      2962
+
+====================================================================================================
+
+> Training :: Fold 2 :: Seed 82 :: ../checkpoints/verification_json/bart/sent_kfold/2
+> Evaluating :: Fold 2
+
+ID: 1
+
+              precision    recall  f1-score   support
+
+    negative       0.73      0.83      0.78       195
+    positive       0.99      0.98      0.98      2767
+
+    accuracy                           0.97      2962
+   macro avg       0.86      0.90      0.88      2962
+weighted avg       0.97      0.97      0.97      2962
+
+
+MCC: 0.7639402270427595
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96       225
+           1       0.99      0.99      0.99       256
+           2       0.99      0.98      0.98       255
+           3       0.99      0.97      0.98       231
+           4       1.00      1.00      1.00       265
+           5       0.99      1.00      0.99       261
+           6       1.00      0.98      0.99       221
+           7       1.00      0.99      0.99       224
+           8       0.95      0.97      0.96       303
+           9       0.95      0.96      0.95       288
+          10       0.87      0.79      0.83       238
+          11       0.73      0.83      0.78       195
+
+    accuracy                           0.95      2962
+   macro avg       0.95      0.95      0.95      2962
+weighted avg       0.95      0.95      0.95      2962
+
+====================================================================================================
+
+> Training :: Fold 3 :: Seed 82 :: ../checkpoints/verification_json/bart/sent_kfold/3
+> Evaluating :: Fold 3
+
+ID: 2
+
+              precision    recall  f1-score   support
+
+    negative       0.74      0.85      0.79       195
+    positive       0.99      0.98      0.98      2767
+
+    accuracy                           0.97      2962
+   macro avg       0.87      0.92      0.89      2962
+weighted avg       0.97      0.97      0.97      2962
+
+
+MCC: 0.7788019502809689
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.93      0.95       225
+           1       1.00      0.99      0.99       256
+           2       1.00      0.99      0.99       255
+           3       1.00      0.99      0.99       231
+           4       0.99      0.99      0.99       265
+           5       1.00      1.00      1.00       261
+           6       1.00      0.99      0.99       221
+           7       1.00      1.00      1.00       224
+           8       0.93      1.00      0.96       303
+           9       0.97      0.97      0.97       288
+          10       0.91      0.79      0.85       238
+          11       0.74      0.85      0.79       195
+
+    accuracy                           0.96      2962
+   macro avg       0.96      0.96      0.96      2962
+weighted avg       0.96      0.96      0.96      2962
+
+====================================================================================================
+

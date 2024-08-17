@@ -1,0 +1,1 @@
+[{"nlacp": "The drug is checked against the patient's drug allergies.", "truth": [{"decision": "allow", "subject": "none", "action": "check", "resource": "drug", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "check", "resource": "drug", "condition": "none", "purpose": "none"}], "verification": "correct"}]

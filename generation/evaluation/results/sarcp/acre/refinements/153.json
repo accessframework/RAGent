@@ -1,0 +1,1 @@
+[{"nlacp": "The user may try three times.", "truth": [{"decision": "allow", "subject": "user", "action": "try", "resource": "three time", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "user", "action": "try", "resource": "three time", "condition": "none", "purpose": "none"}], "verification": "correct"}]

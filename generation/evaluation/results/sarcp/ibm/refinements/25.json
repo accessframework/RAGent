@@ -1,0 +1,1 @@
+[{"nlacp": "The system deletes the student from the system.", "truth": [{"decision": "allow", "subject": "system", "action": "delete", "resource": "student", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "delete", "resource": "student", "condition": "none", "purpose": "none"}], "verification": "correct"}]

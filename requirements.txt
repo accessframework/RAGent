@@ -1,0 +1,16 @@
+torch
+peft
+transformers
+bitsandbytes
+einops
+captum
+click
+pandas
+numpy
+gdown
+datasets
+accelerate
+evaluate
+scikit-learn
+wheel
+flash-attn

@@ -1,0 +1,1 @@
+[{"nlacp": "The patient clicks the send button.", "truth": [{"decision": "allow", "subject": "patient", "action": "click", "resource": "send button", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "patient", "action": "click", "resource": "send button", "condition": "none", "purpose": "none"}], "verification": "correct"}]

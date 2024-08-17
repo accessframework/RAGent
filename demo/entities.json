@@ -1,0 +1,31 @@
+{
+    "subject": [
+        "hotcrp.com",
+        "site's manager",
+        "site manager",
+        "program chair",
+        "request",
+        "user",
+        "you"
+    ],
+    "resource": [
+        "artifact",
+        "data",
+        "submission artifact",
+        "review artifact",
+        "profile data",
+        "demographic data",
+        "browsing data",
+        "information",
+        "configuration setting",
+        "profile"
+    ],
+    "purpose": [
+        "review or other purposes"
+    ],
+    "condition": [
+        "artifact was submitted in error",
+        "allowed by Site managers site agreements with HotCRP.com",
+        "upon submitting an artifact to a HotCRP.com site"
+    ]
+}

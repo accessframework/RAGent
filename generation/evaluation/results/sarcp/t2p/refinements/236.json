@@ -1,0 +1,1 @@
+[{"nlacp": "The LHCP must confirm the add.", "truth": [{"decision": "allow", "subject": "lhcp", "action": "confirm", "resource": "add", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "lhcp", "action": "confirm", "resource": "add", "condition": "none", "purpose": "none"}], "verification": "correct"}]

@@ -1,0 +1,1 @@
+[{"nlacp": "Owners can read Name.", "truth": [{"decision": "allow", "subject": "owner", "action": "read", "resource": "name", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "owner", "action": "read", "resource": "name", "condition": "none", "purpose": "none"}], "verification": "correct"}]

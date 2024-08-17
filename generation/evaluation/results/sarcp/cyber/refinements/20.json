@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "Other reasons are that authors are forced to use it to submit their paper.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "force",
+                "resource": "author",
+                "condition": "none",
+                "purpose": "submit their paper"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "use",
+                "resource": "author",
+                "condition": "none",
+                "purpose": "submit their paper"
+            }
+        ],
+        "verification": "correct"
+    }
+]

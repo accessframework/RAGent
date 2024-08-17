@@ -1,0 +1,45 @@
+[
+    {
+        "nlacp": "The authors must use the login and password combination sent after phase 1.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "use",
+                "resource": "login",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "use",
+                "resource": "password",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "use",
+                "resource": "password",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "use",
+                "resource": "login",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

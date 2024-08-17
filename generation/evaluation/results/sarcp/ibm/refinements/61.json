@@ -1,0 +1,1 @@
+[{"nlacp": "The student is added to the system.", "truth": [{"decision": "allow", "subject": "none", "action": "add", "resource": "student", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "add", "resource": "student", "condition": "none", "purpose": "none"}], "verification": "correct"}]

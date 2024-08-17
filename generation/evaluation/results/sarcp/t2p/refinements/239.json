@@ -1,0 +1,1 @@
+[{"nlacp": "An LHCP views his iTrust homepage.", "truth": [{"decision": "allow", "subject": "lhcp", "action": "view", "resource": "itrust homepage", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "lhcp", "action": "view", "resource": "itrust homepage", "condition": "none", "purpose": "none"}], "verification": "correct"}]

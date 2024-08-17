@@ -1,0 +1,1 @@
+[{"nlacp": "A LHCP creates UAPs.", "truth": [{"decision": "allow", "subject": "lhcp", "action": "create", "resource": "uap", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "lhcp", "action": "create", "resource": "uap", "condition": "none", "purpose": "none"}], "verification": "correct"}]

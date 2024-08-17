@@ -1,0 +1,1 @@
+[{"nlacp": "The HCP is notified that required fields contain no input.", "truth": [{"decision": "allow", "subject": "none", "action": "notify", "resource": "hcp", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "notify", "resource": "hcp", "condition": "none", "purpose": "none"}], "verification": "correct"}]

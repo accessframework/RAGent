@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "In the first step, authors must fill in a webform shown by figures 1 and 2, on which they state their names and contact information, the title of their paper, an abstract of the paper, and indicate which conference topics their paper covers.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "fill",
+                "resource": "webform",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "author",
+                "action": "fill in",
+                "resource": "webform",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,0 +1,1 @@
+[{"nlacp": "The answers to the survey are stored.", "truth": [{"decision": "allow", "subject": "none", "action": "store", "resource": "answer", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "store", "resource": "answer", "condition": "none", "purpose": "none"}], "verification": "correct"}]

@@ -1,0 +1,11 @@
+{
+    "test_loss": 0.08752564340829849,
+    "test_accuracy": 0.9851451721809588,
+    "test_f1-micro": 0.9851451721809588,
+    "test_f1-macro": 0.9838757598312625,
+    "test_f1-weighted": 0.9852172622031207,
+    "test_runtime": 154.8318,
+    "test_samples_per_second": 19.13,
+    "test_steps_per_second": 2.396,
+    "epoch": 10.0
+}

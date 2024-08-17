@@ -1,0 +1,1 @@
+[{"nlacp": "The administrator selects one drug.", "truth": [{"decision": "allow", "subject": "administrator", "action": "select", "resource": "drug", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "administrator", "action": "select", "resource": "drug", "condition": "none", "purpose": "none"}], "verification": "correct"}]

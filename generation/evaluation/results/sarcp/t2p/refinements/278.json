@@ -1,0 +1,1 @@
+[{"nlacp": "The patient\u2019s MID can not be edited.", "truth": [{"decision": "deny", "subject": "none", "action": "edit", "resource": "mid", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "deny", "subject": "none", "action": "edit", "resource": "patient mid", "condition": "none", "purpose": "none"}], "verification": "correct"}]

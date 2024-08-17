@@ -1,0 +1,1 @@
+[{"nlacp": "John can assign clerk to users from department A", "truth": [{"decision": "allow", "subject": "john", "action": "assign", "resource": "clerk", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "john", "action": "assign", "resource": "clerk", "condition": "none", "purpose": "none"}], "verification": "correct"}]

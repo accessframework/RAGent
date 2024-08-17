@@ -1,0 +1,1 @@
+[{"nlacp": "System presents a text box to HCP.", "truth": [{"decision": "allow", "subject": "system", "action": "present", "resource": "text box", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "present", "resource": "text box", "condition": "none", "purpose": "none"}], "verification": "correct"}]

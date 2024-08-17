@@ -1,0 +1,1 @@
+[{"nlacp": "The HCP may also add a patient referral (UC33).", "truth": [{"decision": "allow", "subject": "hcp", "action": "add", "resource": "referral", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "hcp", "action": "add", "resource": "referral", "condition": "none", "purpose": "none"}], "verification": "correct"}]

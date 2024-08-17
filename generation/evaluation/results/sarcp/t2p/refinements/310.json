@@ -1,0 +1,1 @@
+[{"nlacp": "A LHCP reviews the consultation.", "truth": [{"decision": "allow", "subject": "lhcp", "action": "review", "resource": "consultation", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "lhcp", "action": "review", "resource": "consultation", "condition": "none", "purpose": "none"}], "verification": "correct"}]

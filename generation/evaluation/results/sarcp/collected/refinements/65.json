@@ -1,0 +1,1 @@
+[{"nlacp": "Staff can print on HP Laserjet 1.", "truth": [{"decision": "allow", "subject": "staff", "action": "print", "resource": "hp laserjet 1", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "staff", "action": "print", "resource": "hp laserjet 1", "condition": "none", "purpose": "none"}], "verification": "correct"}]

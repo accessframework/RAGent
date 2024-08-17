@@ -1,0 +1,43 @@
+[
+    {
+        "nlacp": "After the PC meeting, the PCC must inform the maintainer about the accepted papers, so that the notifications can be sent to the authors.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "pcc",
+                "action": "inform",
+                "resource": "maintainer",
+                "condition": "none",
+                "purpose": "notifications can be sent to the author"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "pcc",
+                "action": "inform",
+                "resource": "maintainer",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mpur"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "pcc",
+                "action": "inform",
+                "resource": "maintainer",
+                "condition": "none",
+                "purpose": "so that the notifications can be sent to the authors"
+            }
+        ],
+        "verification": "correct"
+    }
+]

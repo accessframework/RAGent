@@ -1,0 +1,1 @@
+[{"nlacp": "The LHCP views his or her message inbox.", "truth": [{"decision": "allow", "subject": "lhcp", "action": "view", "resource": "message inbox", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "lhcp", "action": "view", "resource": "message inbox", "condition": "none", "purpose": "none"}], "verification": "correct"}]

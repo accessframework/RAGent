@@ -1,0 +1,1 @@
+[{"nlacp": "The reports are viewed under the \"View My Records\" tab.", "truth": [{"decision": "allow", "subject": "none", "action": "view", "resource": "report", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "view", "resource": "report", "condition": "none", "purpose": "none"}], "verification": "correct"}]

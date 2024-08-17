@@ -1,0 +1,51 @@
+[
+    {
+        "nlacp": "Downloading of papers by the reviewers can start as soon as papers are submitted.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "download",
+                "resource": "paper",
+                "condition": "papers are submitted",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "start",
+                "resource": "paper",
+                "condition": "papers are submitted",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "download",
+                "resource": "paper",
+                "condition": "papers are submitted",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "start",
+                "resource": "paper",
+                "condition": "papers are submitted",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

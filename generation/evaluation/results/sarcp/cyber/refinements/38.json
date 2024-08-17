@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "Further, a high or low priority should be chosen, to indicate how eager they are to review the paper.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "choose",
+                "resource": "high or low priority",
+                "condition": "none",
+                "purpose": "indicate how eager they are to review the paper"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "choose",
+                "resource": "high or low priority",
+                "condition": "none",
+                "purpose": "indicate how eager they are to review the paper"
+            }
+        ],
+        "verification": "correct"
+    }
+]

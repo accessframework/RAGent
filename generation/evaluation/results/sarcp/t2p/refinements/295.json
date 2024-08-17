@@ -1,0 +1,1 @@
+[{"nlacp": "The information is viewed.", "truth": [{"decision": "allow", "subject": "none", "action": "view", "resource": "information", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "view", "resource": "information", "condition": "none", "purpose": "none"}], "verification": "correct"}]

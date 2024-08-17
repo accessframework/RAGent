@@ -1,0 +1,1 @@
+[{"nlacp": "The LHCP obtains a printable report.", "truth": [{"decision": "allow", "subject": "lhcp", "action": "obtain", "resource": "report", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "lhcp", "action": "obtain", "resource": "report", "condition": "none", "purpose": "none"}], "verification": "correct"}]

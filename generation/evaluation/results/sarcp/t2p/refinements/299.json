@@ -1,0 +1,1 @@
+[{"nlacp": "System presents a menu of DLHCP.", "truth": [{"decision": "allow", "subject": "system", "action": "present", "resource": "menu of dlhcp", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "present", "resource": "menu of dlhcp", "condition": "none", "purpose": "none"}], "verification": "correct"}]

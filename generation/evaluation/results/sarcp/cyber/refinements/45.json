@@ -1,0 +1,1 @@
+[{"nlacp": "Authors must submit their paper in two steps.", "truth": [{"decision": "allow", "subject": "author", "action": "submit", "resource": "paper", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "author", "action": "submit", "resource": "paper", "condition": "none", "purpose": "none"}], "verification": "correct"}]

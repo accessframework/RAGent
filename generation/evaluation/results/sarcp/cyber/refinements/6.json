@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "For this process to work smoothly, the abstracts should be submitted at least one week  before the full paper is submitted.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "submit",
+                "resource": "abstract",
+                "condition": "one week before the full paper is submitted",
+                "purpose": "process to work smoothly"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "submit",
+                "resource": "abstract",
+                "condition": "one week before the full paper is submitted",
+                "purpose": "process to work smoothly"
+            }
+        ],
+        "verification": "correct"
+    }
+]

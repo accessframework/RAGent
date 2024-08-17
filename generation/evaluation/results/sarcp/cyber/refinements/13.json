@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "In case there are less than 4 reviewers, this process is repeated with the list of reviewers who indicated a low preference for the paper.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "repeat",
+                "resource": "review process",
+                "condition": "there are less than 4 reviewer",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "repeat",
+                "resource": "list of reviewer",
+                "condition": "there are less than 4 reviewer",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

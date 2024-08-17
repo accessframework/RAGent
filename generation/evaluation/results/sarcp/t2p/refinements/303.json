@@ -1,0 +1,1 @@
+[{"nlacp": "The HCP must cancel the prescription.", "truth": [{"decision": "allow", "subject": "hcp", "action": "cancel", "resource": "prescription", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "hcp", "action": "cancel", "resource": "prescription", "condition": "none", "purpose": "none"}], "verification": "correct"}]

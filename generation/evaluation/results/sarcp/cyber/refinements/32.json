@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "Further, it allows reviewers to learn about each other\u2019s opinions, which provides means for good preparation for the PC meeting.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "learn",
+                "resource": "opinion",
+                "condition": "none",
+                "purpose": "good preparation for the pc meeting"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "reviewer",
+                "action": "learn",
+                "resource": "opinion",
+                "condition": "none",
+                "purpose": "good preparation for the pc meeting"
+            }
+        ],
+        "verification": "correct"
+    }
+]

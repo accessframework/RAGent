@@ -1,0 +1,1 @@
+[{"nlacp": "The patient is sent a \"fake email\".", "truth": [{"decision": "allow", "subject": "none", "action": "send", "resource": "fake email", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "send", "resource": "fake email", "condition": "none", "purpose": "none"}], "verification": "correct"}]

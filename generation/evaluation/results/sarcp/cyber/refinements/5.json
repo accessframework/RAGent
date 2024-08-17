@@ -1,0 +1,213 @@
+[
+    {
+        "nlacp": "Although CyberChair is not something to sit in (please refer to www.cyberchair.com if you are looking for that), when you are a program chair, you can sit back, relax and watch the progress of the submission and review process.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "watch",
+                "resource": "review process",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "cyberchair",
+                "action": "watch",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "watch",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "watch",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 2,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "watch",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "review",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 3,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "watch",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "review",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "relax",
+                "resource": "none",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 4,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "watch",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "review",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "review",
+                "resource": "progress of the submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "sit",
+                "resource": "cyberchair",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "relax",
+                "resource": "none",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,0 +1,1 @@
+[{"nlacp": "An email notification is sent .", "truth": [{"decision": "allow", "subject": "none", "action": "send", "resource": "email notification", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "none", "action": "send", "resource": "email notification", "condition": "none", "purpose": "none"}], "verification": "correct"}]

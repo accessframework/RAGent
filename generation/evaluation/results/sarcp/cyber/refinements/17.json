@@ -1,0 +1,29 @@
+[
+    {
+        "nlacp": "His or her personal webpage will then be updated automatically.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "update",
+                "resource": "webpage",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "none",
+                "action": "update",
+                "resource": "personal webpage",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]
