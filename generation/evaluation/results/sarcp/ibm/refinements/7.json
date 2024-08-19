@@ -1,1 +1,29 @@
-[{"nlacp": "The Student also selects any course offerings to delete from the existing schedule.", "truth": [{"decision": "allow", "subject": "student", "action": "select", "resource": "course offering", "condition": "none", "purpose": "delete from the existing schedule"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "student", "action": "select", "resource": "course offering", "condition": "none", "purpose": "delete from the existing schedule"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The Student also selects any course offerings to delete from the existing schedule.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "student",
+                "action": "select",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "delete from the existing schedule"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "student",
+                "action": "select",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "delete from the existing schedule"
+            }
+        ],
+        "verification": "correct"
+    }
+]

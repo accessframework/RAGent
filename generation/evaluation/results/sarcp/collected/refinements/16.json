@@ -1,1 +1,29 @@
-[{"nlacp": "The director chooses options from the package to give to all employees.", "truth": [{"decision": "allow", "subject": "director", "action": "choose", "resource": "option", "condition": "none", "purpose": "give to all employee"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "director", "action": "choose", "resource": "option", "condition": "none", "purpose": "give to all employee"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The director chooses options from the package to give to all employees.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "director",
+                "action": "choose",
+                "resource": "option",
+                "condition": "none",
+                "purpose": "give to all employee"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "director",
+                "action": "choose",
+                "resource": "option",
+                "condition": "none",
+                "purpose": "give to all employee"
+            }
+        ],
+        "verification": "correct"
+    }
+]

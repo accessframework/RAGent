@@ -7,7 +7,11 @@ generation/evaluation/results/sarcp_old/
 generation/evaluation/results/test_with_act/
 generation/evaluation/results/test*/
 generation/evaluation/results/*.txt
+generation/evaluation/results/eval
 generation/misc
+demo/generations
+demo/sents.json
+demo/*.csv
 # C extensions
 *.so
 demo/results

@@ -1,1 +1,45 @@
-[{"nlacp": "The system retrieves and displays the Student\u2019s current schedule (e.g., the schedule for the current semester).", "truth": [{"decision": "allow", "subject": "system", "action": "retrieve", "resource": "schedule", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "system", "action": "display", "resource": "schedule", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "display", "resource": "student schedule", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "system", "action": "retrieve", "resource": "student schedule", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The system retrieves and displays the Student\u2019s current schedule (e.g., the schedule for the current semester).",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "system",
+                "action": "retrieve",
+                "resource": "schedule",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "system",
+                "action": "display",
+                "resource": "schedule",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "system",
+                "action": "display",
+                "resource": "student schedule",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "system",
+                "action": "retrieve",
+                "resource": "student schedule",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,1 +1,29 @@
-[{"nlacp": "If the invoice\u2019s total amount exceeds one million, then two different supervisors must authorize the invoice.", "truth": [{"decision": "allow", "subject": "supervisor", "action": "authorize", "resource": "invoice", "condition": "invoices total amount exceeds one million", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "supervisor", "action": "authorize", "resource": "invoice", "condition": "invoices total amount exceeds one million", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "If the invoice\u2019s total amount exceeds one million, then two different supervisors must authorize the invoice.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "supervisor",
+                "action": "authorize",
+                "resource": "invoice",
+                "condition": "invoices total amount exceeds one million",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "supervisor",
+                "action": "authorize",
+                "resource": "invoice",
+                "condition": "invoices total amount exceeds one million",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

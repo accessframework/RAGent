@@ -1,1 +1,73 @@
-[{"nlacp": "The professor selects possibly and possibly de-selects the course offerings that he or she wishes to teach for the upcoming semester.", "truth": [{"decision": "allow", "subject": "professor", "action": "select", "resource": "course offering", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "professor", "action": "deselect", "resource": "course offering", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "professor", "action": "select", "resource": "course offering", "condition": "none", "purpose": "sign up to teach course"}], "verification": "cpur"}, {"iteration": 1, "pred": [{"decision": "allow", "subject": "professor", "action": "select", "resource": "course offering", "condition": "none", "purpose": "teach for the upcoming semester"}], "verification": "mrules"}, {"iteration": 2, "pred": [{"decision": "allow", "subject": "professor", "action": "select", "resource": "course offering", "condition": "none", "purpose": "teach for the upcoming semester"}, {"decision": "allow", "subject": "professor", "action": "deselect", "resource": "course offering", "condition": "none", "purpose": "teach for the upcoming semester"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The professor selects possibly and possibly de-selects the course offerings that he or she wishes to teach for the upcoming semester.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "select",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "deselect",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "select",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "sign up to teach course"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "select",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "teach for the upcoming semester"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 2,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "select",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "teach for the upcoming semester"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "deselect",
+                "resource": "course offering",
+                "condition": "none",
+                "purpose": "teach for the upcoming semester"
+            }
+        ],
+        "verification": "correct"
+    }
+]

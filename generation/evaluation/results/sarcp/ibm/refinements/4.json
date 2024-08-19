@@ -1,1 +1,53 @@
-[{"nlacp": "The Professor can either resolve the schedule conflict (i.e., by canceling his selection to teach one of the course offerings), or cancel the operation, in which case, any selections will be lost, and the use case ends.", "truth": [{"decision": "allow", "subject": "professor", "action": "cancel", "resource": "operation", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "professor", "action": "resolve", "resource": "schedule conflict", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "professor", "action": "cancel", "resource": "operation", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "professor", "action": "cancel", "resource": "choice", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "professor", "action": "resolve", "resource": "schedule conflict", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The Professor can either resolve the schedule conflict (i.e., by canceling his selection to teach one of the course offerings), or cancel the operation, in which case, any selections will be lost, and the use case ends.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "cancel",
+                "resource": "operation",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "resolve",
+                "resource": "schedule conflict",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "cancel",
+                "resource": "operation",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "cancel",
+                "resource": "choice",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "resolve",
+                "resource": "schedule conflict",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

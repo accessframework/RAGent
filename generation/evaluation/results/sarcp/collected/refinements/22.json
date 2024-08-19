@@ -1,1 +1,29 @@
-[{"nlacp": "A professor can review the same project at most one time.", "truth": [{"decision": "allow", "subject": "professor", "action": "review", "resource": "same project", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "professor", "action": "review", "resource": "same project", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "A professor can review the same project at most one time.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "review",
+                "resource": "same project",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "review",
+                "resource": "same project",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

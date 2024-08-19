@@ -1,1 +1,29 @@
-[{"nlacp": "Customer Service Reps can modify credit card numbers for order processing, if the customer is notified by email of the change.", "truth": [{"decision": "allow", "subject": "customer service rep", "action": "modify", "resource": "credit card number", "condition": "customer is notified by email of the change", "purpose": "order processing"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "customer service rep", "action": "modify", "resource": "credit card number", "purpose": "order processing", "condition": "customer is notified by email of the change"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Customer Service Reps can modify credit card numbers for order processing, if the customer is notified by email of the change.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "customer service rep",
+                "action": "modify",
+                "resource": "credit card number",
+                "condition": "customer is notified by email of the change",
+                "purpose": "order processing"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "customer service rep",
+                "action": "modify",
+                "resource": "credit card number",
+                "purpose": "order processing",
+                "condition": "customer is notified by email of the change"
+            }
+        ],
+        "verification": "correct"
+    }
+]

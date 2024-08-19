@@ -1,1 +1,29 @@
-[{"nlacp": "Only Professors can enter grades for students.", "truth": [{"decision": "allow", "subject": "professor", "action": "enter", "resource": "grade", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "professor", "action": "enter", "resource": "grade", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Only Professors can enter grades for students.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "enter",
+                "resource": "grade",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "enter",
+                "resource": "grade",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

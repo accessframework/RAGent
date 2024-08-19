@@ -1,1 +1,29 @@
-[{"nlacp": "Customer service reps can use credit card number for the purpose of updating records if requested by a patient.", "truth": [{"decision": "allow", "subject": "customer service rep", "action": "use", "resource": "credit card number", "condition": "requested by a patient", "purpose": "updating record"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "customer service rep", "action": "use", "resource": "credit card number", "purpose": "updating record", "condition": "requested by a patient"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Customer service reps can use credit card number for the purpose of updating records if requested by a patient.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "customer service rep",
+                "action": "use",
+                "resource": "credit card number",
+                "condition": "requested by a patient",
+                "purpose": "updating record"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "customer service rep",
+                "action": "use",
+                "resource": "credit card number",
+                "purpose": "updating record",
+                "condition": "requested by a patient"
+            }
+        ],
+        "verification": "correct"
+    }
+]

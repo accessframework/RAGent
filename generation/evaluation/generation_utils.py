@@ -5,7 +5,7 @@ from prompts import get_generation_msgs, get_generation_msgs_ents
 
 VECTORSTORES = load_vectorstores()
 
-def generate_llm(nlacp, origin, tokenizer, model, no_retrieve=False, setting="DSARCP"):
+def generate_llm(nlacp, origin, tokenizer, model, no_retrieve=False, setting="DSARCP", n = 5):
     
     terminators = [
         60, # ]
@@ -21,7 +21,7 @@ def generate_llm(nlacp, origin, tokenizer, model, no_retrieve=False, setting="DS
         
     if not no_retrieve:
     
-        ents = get_available_entities(nlacp, origin, VECTORSTORES)
+        ents = get_available_entities(nlacp, origin, VECTORSTORES,n)
 
         messages = get_generation_msgs_ents(nlacp, ents)
     else:
@@ -68,7 +68,7 @@ def generate_llm(nlacp, origin, tokenizer, model, no_retrieve=False, setting="DS
         print('-'*30)
         return [], origin
 
-def generate_step(nlacp, origin, pipe, tokenizer, no_retrieve=False, setting = 'DSARCP'):
+def generate_step(nlacp, origin, pipe, tokenizer, no_retrieve=False, setting = 'DSARCP', n = 5):
 
     terminators = [
         60, # ]
@@ -91,7 +91,7 @@ def generate_step(nlacp, origin, pipe, tokenizer, no_retrieve=False, setting = '
         
     if not no_retrieve:
     
-        ents = get_available_entities(nlacp, origin, VECTORSTORES)
+        ents = get_available_entities(nlacp, origin, VECTORSTORES, n)
 
         messages = get_generation_msgs_ents(nlacp, ents)
     else:

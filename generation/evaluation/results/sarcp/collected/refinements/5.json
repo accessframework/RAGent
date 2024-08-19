@@ -1,1 +1,45 @@
-[{"nlacp": "Shipping Reps can use customer name and customer mailing addresses to ship orders.", "truth": [{"decision": "allow", "subject": "shipping rep", "action": "use", "resource": "customer mailing address", "condition": "none", "purpose": "ship order"}, {"decision": "allow", "subject": "shipping rep", "action": "use", "resource": "customer name", "condition": "none", "purpose": "ship order"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "shipping rep", "action": "use", "resource": "customer mailing address", "condition": "none", "purpose": "ship order"}, {"decision": "allow", "subject": "shipping rep", "action": "use", "resource": "customer name", "condition": "none", "purpose": "ship order"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Shipping Reps can use customer name and customer mailing addresses to ship orders.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "shipping rep",
+                "action": "use",
+                "resource": "customer mailing address",
+                "condition": "none",
+                "purpose": "ship order"
+            },
+            {
+                "decision": "allow",
+                "subject": "shipping rep",
+                "action": "use",
+                "resource": "customer name",
+                "condition": "none",
+                "purpose": "ship order"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "shipping rep",
+                "action": "use",
+                "resource": "customer mailing address",
+                "condition": "none",
+                "purpose": "ship order"
+            },
+            {
+                "decision": "allow",
+                "subject": "shipping rep",
+                "action": "use",
+                "resource": "customer name",
+                "condition": "none",
+                "purpose": "ship order"
+            }
+        ],
+        "verification": "correct"
+    }
+]

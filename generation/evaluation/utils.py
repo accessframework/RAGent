@@ -424,7 +424,7 @@ def get_candidates(store, sentence,k=5):
         
     return l
 
-def get_available_entities(query, store_name, vectorstores):
+def get_available_entities(query, store_name, vectorstores, n=5):
     
     entities = {'subject': [], 'resource': [], 'purpose': [], 'condition': []}
     if store_name.endswith('_train'):
@@ -432,7 +432,7 @@ def get_available_entities(query, store_name, vectorstores):
     
     stores = vectorstores[store_name]
     for key in entities:
-        entities[key] = get_candidates(stores[key], query)
+        entities[key] = get_candidates(stores[key], query, k=n)
 
     return entities
 

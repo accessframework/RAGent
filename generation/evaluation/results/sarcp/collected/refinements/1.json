@@ -1,1 +1,223 @@
-[{"nlacp": "Employees ranked as professors or tenured assistant professors can select from, insert into, and delete from graduate admission related tables in the database.", "truth": [{"decision": "allow", "subject": "professor", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "professor", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "professor", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "tenured assistant professor", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}], "verification": "mrules"}, {"iteration": 1, "pred": [{"decision": "allow", "subject": "tenured assistant professor", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "employees ranked as professors", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}], "verification": "mrules"}, {"iteration": 2, "pred": [{"decision": "allow", "subject": "tenured assistant professor", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "employees ranked as professors", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "employees ranked as professors", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}], "verification": "mrules"}, {"iteration": 3, "pred": [{"decision": "allow", "subject": "tenured assistant professor", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "employees ranked as professors", "action": "select", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "employees ranked as professors", "action": "delete", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "tenured assistant professor", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}, {"decision": "allow", "subject": "employees ranked as professors", "action": "insert", "resource": "graduate admission related table", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Employees ranked as professors or tenured assistant professors can select from, insert into, and delete from graduate admission related tables in the database.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "professor",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "employees ranked as professors",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 2,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "employees ranked as professors",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "employees ranked as professors",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 3,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "employees ranked as professors",
+                "action": "select",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "employees ranked as professors",
+                "action": "delete",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "tenured assistant professor",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "employees ranked as professors",
+                "action": "insert",
+                "resource": "graduate admission related table",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

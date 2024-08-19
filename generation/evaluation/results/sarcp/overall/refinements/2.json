@@ -1,1 +1,169 @@
-[{"nlacp": "No competitor to such paper shall resign, once he has already appointed a sub - reviewer for that paper.", "truth": [{"decision": "deny", "subject": "competitor", "action": "resign", "resource": "none", "condition": "once he has already appointed a sub reviewer for that paper", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 1, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 2, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 3, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 4, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 5, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 6, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 7, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 8, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 9, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}, {"iteration": 10, "pred": [{"decision": "deny", "subject": "sub reviewer", "action": "resign", "resource": "none", "condition": "he has already appointed a subreviewer for the work", "purpose": "none"}], "verification": "cpur"}]
+[
+    {
+        "nlacp": "No competitor to such paper shall resign, once he has already appointed a sub - reviewer for that paper.",
+        "truth": [
+            {
+                "decision": "deny",
+                "subject": "competitor",
+                "action": "resign",
+                "resource": "none",
+                "condition": "once he has already appointed a sub reviewer for that paper",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 2,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 3,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 4,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 5,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 6,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 7,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 8,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 9,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    },
+    {
+        "iteration": 10,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "sub reviewer",
+                "action": "resign",
+                "resource": "none",
+                "condition": "he has already appointed a subreviewer for the work",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cpur"
+    }
+]

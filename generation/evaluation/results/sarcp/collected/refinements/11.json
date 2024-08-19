@@ -1,1 +1,29 @@
-[{"nlacp": "The organisation may use email addresses to answer inquiries.", "truth": [{"decision": "allow", "subject": "organisation", "action": "use", "resource": "email address", "condition": "none", "purpose": "answer inquirie"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "organisation", "action": "use", "resource": "email address", "condition": "none", "purpose": "answer inquirie"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The organisation may use email addresses to answer inquiries.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "organisation",
+                "action": "use",
+                "resource": "email address",
+                "condition": "none",
+                "purpose": "answer inquirie"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "organisation",
+                "action": "use",
+                "resource": "email address",
+                "condition": "none",
+                "purpose": "answer inquirie"
+            }
+        ],
+        "verification": "correct"
+    }
+]

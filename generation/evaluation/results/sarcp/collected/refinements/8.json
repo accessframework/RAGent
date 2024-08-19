@@ -1,1 +1,61 @@
-[{"nlacp": "Customer service reps, ducks or Lawyers can use credit card number for the purpose of making treatment decisions if customer has opted-in.", "truth": [{"decision": "allow", "subject": "customer service rep", "action": "use", "resource": "credit card number", "condition": "customer has optedin", "purpose": "making treatment decision"}, {"decision": "allow", "subject": "lawyer", "action": "use", "resource": "credit card number", "condition": "customer has optedin", "purpose": "making treatment decision"}, {"decision": "allow", "subject": "duck", "action": "use", "resource": "credit card number", "condition": "customer has optedin", "purpose": "making treatment decision"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "customer service rep", "action": "use", "resource": "credit card number", "purpose": "making treatment decision", "condition": "customer has optedin"}, {"decision": "allow", "subject": "duck", "action": "use", "resource": "credit card number", "purpose": "making treatment decision", "condition": "customer has optedin"}, {"decision": "allow", "subject": "lawyer", "action": "use", "resource": "credit card number", "purpose": "making treatment decision", "condition": "customer has optedin"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Customer service reps, ducks or Lawyers can use credit card number for the purpose of making treatment decisions if customer has opted-in.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "customer service rep",
+                "action": "use",
+                "resource": "credit card number",
+                "condition": "customer has optedin",
+                "purpose": "making treatment decision"
+            },
+            {
+                "decision": "allow",
+                "subject": "lawyer",
+                "action": "use",
+                "resource": "credit card number",
+                "condition": "customer has optedin",
+                "purpose": "making treatment decision"
+            },
+            {
+                "decision": "allow",
+                "subject": "duck",
+                "action": "use",
+                "resource": "credit card number",
+                "condition": "customer has optedin",
+                "purpose": "making treatment decision"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "customer service rep",
+                "action": "use",
+                "resource": "credit card number",
+                "purpose": "making treatment decision",
+                "condition": "customer has optedin"
+            },
+            {
+                "decision": "allow",
+                "subject": "duck",
+                "action": "use",
+                "resource": "credit card number",
+                "purpose": "making treatment decision",
+                "condition": "customer has optedin"
+            },
+            {
+                "decision": "allow",
+                "subject": "lawyer",
+                "action": "use",
+                "resource": "credit card number",
+                "purpose": "making treatment decision",
+                "condition": "customer has optedin"
+            }
+        ],
+        "verification": "correct"
+    }
+]

@@ -1,1 +1,29 @@
-[{"nlacp": "A PC member can resign his membership.", "truth": [{"decision": "allow", "subject": "pc member", "action": "resign", "resource": "membership", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "pc member", "action": "resign", "resource": "membership", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "A PC member can resign his membership.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "pc member",
+                "action": "resign",
+                "resource": "membership",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "pc member",
+                "action": "resign",
+                "resource": "membership",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

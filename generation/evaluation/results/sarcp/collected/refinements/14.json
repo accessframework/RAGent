@@ -1,1 +1,29 @@
-[{"nlacp": "Financial analysts can use customer accounts to make loan decisions.", "truth": [{"decision": "allow", "subject": "financial analyst", "action": "use", "resource": "customer account", "condition": "none", "purpose": "make loan decision"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "financial analyst", "action": "use", "resource": "customer account", "condition": "none", "purpose": "make loan decision"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Financial analysts can use customer accounts to make loan decisions.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "financial analyst",
+                "action": "use",
+                "resource": "customer account",
+                "condition": "none",
+                "purpose": "make loan decision"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "financial analyst",
+                "action": "use",
+                "resource": "customer account",
+                "condition": "none",
+                "purpose": "make loan decision"
+            }
+        ],
+        "verification": "correct"
+    }
+]

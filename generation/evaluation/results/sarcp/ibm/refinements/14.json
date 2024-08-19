@@ -1,1 +1,29 @@
-[{"nlacp": "The Student verifies the deletion.", "truth": [{"decision": "allow", "subject": "student", "action": "verify", "resource": "deletion", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "student", "action": "verify", "resource": "deletion", "condition": "none", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "The Student verifies the deletion.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "student",
+                "action": "verify",
+                "resource": "deletion",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "student",
+                "action": "verify",
+                "resource": "deletion",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

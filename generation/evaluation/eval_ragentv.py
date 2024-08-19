@@ -1,5 +1,5 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 import torch
 from tqdm import tqdm
 import ast
@@ -14,12 +14,13 @@ from peft import PeftModel
 from evaluator import AccessEvaluator
 from pathlib import Path
 import click
+import time
 
 
 MAX_TRIES = 10
     
 
-def generate_refine(mode, df, gen_model, gen_tokenizer, ver_model, ver_tokenizer, refine=True, save_generations=True, use_pipe=False, no_retrieve=False, no_update=False, result_dir = "results/eval"):
+def generate_refine(mode, df, gen_model, gen_tokenizer, ver_model, ver_tokenizer, refine=True, save_generations=True, use_pipe=False, no_retrieve=False, no_update=False, result_dir = "results/eval", n=5):
     postfix = ""
     
     if refine:
@@ -53,9 +54,9 @@ def generate_refine(mode, df, gen_model, gen_tokenizer, ver_model, ver_tokenizer
         # t = ast.literal_eval(str(truth))
         
         if use_pipe:
-            p, store = generate_step(nlacp, origin, gen_pipe, gen_tokenizer, no_retrieve)
+            p, store = generate_step(nlacp, origin, gen_pipe, gen_tokenizer, no_retrieve, n = n)
         else:
-            p, store = generate_llm(nlacp, origin, gen_tokenizer, gen_model, no_retrieve)
+            p, store = generate_llm(nlacp, origin, gen_tokenizer, gen_model, no_retrieve, n = n)
         
         generations.append({
             'nlacp': nlacp,
@@ -155,11 +156,15 @@ def generate_refine(mode, df, gen_model, gen_tokenizer, ver_model, ver_tokenizer
               help='Directory to save evaluation results',
               show_default=True,
               )
+@click.option('--n', default=5, 
+              help='Number of entities to retrieve per each component',
+              show_default=True,
+              )
 @click.option('--refine', is_flag=True)
 @click.option('--no_retrieve', is_flag=True)
 @click.option('--no_update', is_flag=True)
 @click.option('--use_pipe', is_flag=True)
-def main(mode, result_dir, refine, no_retrieve, no_update, use_pipe):
+def main(mode, result_dir, n, refine, no_retrieve, no_update, use_pipe):
     
     set_seed(1)
     
@@ -203,13 +208,15 @@ def main(mode, result_dir, refine, no_retrieve, no_update, use_pipe):
         )
         ver_model = ver_model.eval()
     
+    start = time.time()
     results = generate_refine(
         mode, df, gen_model, gen_tokenizer, ver_model, ver_tokenizer, refine=refine, save_generations=True, use_pipe=use_pipe, no_retrieve=no_retrieve, no_update=no_update,
-        result_dir = result_dir
+        result_dir = result_dir, n=n
     )
+    end = time.time()
     
     print("\n\n ========================= Results (SARCP) ================================= \n")
-    print(f'Mode: {mode}\nRefinement: {refine}\nRetrieval" {not no_retrieve}\nPost-process: {not no_update}\nUsing pipe: {use_pipe}\n')
+    print(f'Mode: {mode}\nRefinement: {refine}\nRetrieval" {not no_retrieve}\nPost-process: {not no_update}\nUsing pipe: {use_pipe}\nTime elapsed: {end-start}s\n')
     print(f"Precision: {results['srl']['precision']}\nRecall: {results['srl']['recall']}\nF1: {results['srl']['f1']}\n")
     print(f"Component-wise results: {results['srl']['components']}\n")
     

@@ -1,1 +1,43 @@
-[{"nlacp": "Supervisors can collect personal information if required by law.", "truth": [{"decision": "allow", "subject": "supervisor", "action": "collect", "resource": "personal information", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "supervisor", "action": "collect", "resource": "personal information", "condition": "person is the designated parent or guardian", "purpose": "none"}], "verification": "ccond"}, {"iteration": 1, "pred": [{"decision": "allow", "subject": "supervisor", "action": "collect", "resource": "personal information", "condition": "required by law", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Supervisors can collect personal information if required by law.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "supervisor",
+                "action": "collect",
+                "resource": "personal information",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "supervisor",
+                "action": "collect",
+                "resource": "personal information",
+                "condition": "person is the designated parent or guardian",
+                "purpose": "none"
+            }
+        ],
+        "verification": "ccond"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "supervisor",
+                "action": "collect",
+                "resource": "personal information",
+                "condition": "required by law",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

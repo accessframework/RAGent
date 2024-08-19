@@ -1,1 +1,29 @@
-[{"nlacp": "If, in the Update a Professor  or Delete a Professor sub-flows, a professor with the specified id number does not exist, the system displays an error message.", "truth": [{"decision": "allow", "subject": "system", "action": "display", "resource": "error message", "condition": "professor with the specified id number does not exist in the update a professor or delete a professor subflow", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "system", "action": "display", "resource": "error message", "condition": "professor with the specified id number does not exist in the update a professor or delete a professor subflow", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "If, in the Update a Professor  or Delete a Professor sub-flows, a professor with the specified id number does not exist, the system displays an error message.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "system",
+                "action": "display",
+                "resource": "error message",
+                "condition": "professor with the specified id number does not exist in the update a professor or delete a professor subflow",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "system",
+                "action": "display",
+                "resource": "error message",
+                "condition": "professor with the specified id number does not exist in the update a professor or delete a professor subflow",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

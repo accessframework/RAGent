@@ -1,1 +1,45 @@
-[{"nlacp": "Financial consultants can collect and use customer name for the purpose of confirming identity.", "truth": [{"decision": "allow", "subject": "financial consultant", "action": "use", "resource": "customer name", "condition": "none", "purpose": "confirming identity"}, {"decision": "allow", "subject": "financial consultant", "action": "collect", "resource": "customer name", "condition": "none", "purpose": "confirming identity"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "financial consultant", "action": "collect", "resource": "customer name", "condition": "none", "purpose": "confirming identity"}, {"decision": "allow", "subject": "financial consultant", "action": "use", "resource": "customer name", "condition": "none", "purpose": "confirming identity"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Financial consultants can collect and use customer name for the purpose of confirming identity.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "financial consultant",
+                "action": "use",
+                "resource": "customer name",
+                "condition": "none",
+                "purpose": "confirming identity"
+            },
+            {
+                "decision": "allow",
+                "subject": "financial consultant",
+                "action": "collect",
+                "resource": "customer name",
+                "condition": "none",
+                "purpose": "confirming identity"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "financial consultant",
+                "action": "collect",
+                "resource": "customer name",
+                "condition": "none",
+                "purpose": "confirming identity"
+            },
+            {
+                "decision": "allow",
+                "subject": "financial consultant",
+                "action": "use",
+                "resource": "customer name",
+                "condition": "none",
+                "purpose": "confirming identity"
+            }
+        ],
+        "verification": "correct"
+    }
+]

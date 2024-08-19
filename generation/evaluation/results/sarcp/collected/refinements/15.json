@@ -1,1 +1,43 @@
-[{"nlacp": "Management can report customer transactions if required by law.", "truth": [{"decision": "allow", "subject": "management", "action": "report", "resource": "customer transaction", "condition": "none", "purpose": "none"}]}, {"iteration": 0, "pred": [{"decision": "allow", "subject": "management", "action": "report", "resource": "customer transaction", "condition": "person is the designated parent or guardian", "purpose": "none"}], "verification": "ccond"}, {"iteration": 1, "pred": [{"decision": "allow", "subject": "management", "action": "report", "resource": "customer transaction", "condition": "required by law", "purpose": "none"}], "verification": "correct"}]
+[
+    {
+        "nlacp": "Management can report customer transactions if required by law.",
+        "truth": [
+            {
+                "decision": "allow",
+                "subject": "management",
+                "action": "report",
+                "resource": "customer transaction",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ]
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "management",
+                "action": "report",
+                "resource": "customer transaction",
+                "condition": "person is the designated parent or guardian",
+                "purpose": "none"
+            }
+        ],
+        "verification": "ccond"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "management",
+                "action": "report",
+                "resource": "customer transaction",
+                "condition": "required by law",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

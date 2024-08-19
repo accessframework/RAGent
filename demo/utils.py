@@ -101,7 +101,6 @@ deny_sents = ['prohibited to', 'not able to', 'shall not', 'unauthorized to']
 
 def get_generation_msgs_ents(nlacp, with_ents = True, ent_file=None):
     if ent_file == None:
-        # ents = {'subject': ["hotcrp.com", "site's manager", "site manager",'program chair', "request", "user", 'you'], 'resource': ['artifact', 'data', 'submission artifact', 'review artifact', 'profile data', 'demographic data', 'browsing data', 'information', 'configuration setting', 'profile'], 'purpose': ['review or other purposes'], 'condition': ['artifact was submitted in error', 'allowed by Site managers site agreements with HotCRP.com', 'upon submitting an artifact to a HotCRP.com site']}
         with_ents = False
     else:
         with open(ent_file, 'r') as f:
