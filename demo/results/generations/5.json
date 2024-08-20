@@ -1,0 +1,33 @@
+[
+    {
+        "nlacp": "In most cases, The HotCRP.com service does not own the data you provide."
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "own",
+                "resource": "data",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "allow_deny"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "deny",
+                "subject": "hotcrp.com",
+                "action": "own",
+                "resource": "data",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

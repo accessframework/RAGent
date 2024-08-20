@@ -43,6 +43,8 @@ install_gen_dep() {
   pip install -U transformers --quiet
   pip install -U wheel
   pip install -U flash-attn
+  pip install langchain
+
 }
 
 preprocess() {
@@ -59,8 +61,6 @@ run_agentv() {
     else
         python demo.py 
     fi
-    
-
 }
 
 create_venv

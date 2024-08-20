@@ -404,9 +404,16 @@ def load_vectorstores(store_location = "../../data/vectorstores"):
             embeddings,
             allow_dangerous_deserialization=True,
         )
+        
+        vector_store_actions = FAISS.load_local(
+            f"{store_location}/{dset}/actions_index",
+            embeddings,
+            allow_dangerous_deserialization=True,
+        )
 
         stores = {
             "subject": vector_store_subjects,
+            "action": vector_store_actions,
             "resource": vector_store_resources,
             "purpose": vector_store_purposes,
             "condition": vector_store_conditions,
@@ -426,7 +433,7 @@ def get_candidates(store, sentence,k=5):
 
 def get_available_entities(query, store_name, vectorstores, n=5):
     
-    entities = {'subject': [], 'resource': [], 'purpose': [], 'condition': []}
+    entities = {'subject': [], 'action': [], 'resource': [], 'purpose': [], 'condition': []}
     if store_name.endswith('_train'):
         store_name = 'misc'
     

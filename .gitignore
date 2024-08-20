@@ -3,18 +3,26 @@ __pycache__/
 *.py[cod]
 *$py.class
 checkpoints
-generation/evaluation/results/sarcp_old/
+generation/evaluation/results/*_old/
+generation/evaluation/results/decide_n
+generation/evaluation/results/related_works/rworks
+generation/evaluation/results/*/*/*_no_update*
+generation/evaluation/results/*/*/*_no_retrieve*
 generation/evaluation/results/test_with_act/
 generation/evaluation/results/test*/
 generation/evaluation/results/*.txt
 generation/evaluation/results/eval
 generation/misc
-demo/generations
+demo/vectorstores
 demo/sents.json
+demo/analyze.ipynb
 demo/*.csv
+demo/srl_results_sarcp.py
+demo/srl_results_sar.py
+demo/results/demo_pred_srl_xia.json
 # C extensions
 *.so
-demo/results
+
 demo/demoenv
 # Distribution / packaging
 .Python

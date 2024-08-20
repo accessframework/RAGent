@@ -1,0 +1,33 @@
+[
+    {
+        "nlacp": "You give that site managers (e.g., the program chairs) permission to distribute artifacts at that site managers (e.g., the program chairs) discretion, for review or other purposes."
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "site manager",
+                "action": "distribute",
+                "resource": "submission",
+                "condition": "none",
+                "purpose": "review or other purposes"
+            }
+        ],
+        "verification": "cres"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "site manager",
+                "action": "distribute",
+                "resource": "artifact",
+                "condition": "none",
+                "purpose": "review or other purposes"
+            }
+        ],
+        "verification": "correct"
+    }
+]

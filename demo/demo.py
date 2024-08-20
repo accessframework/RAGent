@@ -12,7 +12,7 @@ from transformers import (
 import pandas as pd
 from tqdm import tqdm
 import click
-from utils import is_nlacp , generate_policy
+from utils import is_nlacp , generate_policy, create_vectorstores
 
 logging.basicConfig(
     format="%(asctime)s %(name)s %(levelname)s: %(message)s",
@@ -80,9 +80,12 @@ def main(ent_file=None):
     
     if ent_file!=None:
         logging.info(f"Using the entity file: {ent_file}")
+        logging.info("Creating vectorstores ...")
+        store = create_vectorstores(ent_file)
         with_ents = True
     else:
         logging.info("No entity file is provided.")
+        store = None
         with_ents = False
 
     logging.info("Generating ...")
@@ -91,7 +94,7 @@ def main(ent_file=None):
         inputs.append(s)
         nlacp = is_nlacp(s, id_model, id_tokenizer)
         if nlacp:
-            output, _, _ = generate_policy(id, s, gen_model, gen_tokenizer, ver_model, ver_tokenizer, with_ents=with_ents, ent_file=ent_file)
+            output, _, _ = generate_policy(id, s, gen_model, gen_tokenizer, ver_model, ver_tokenizer, with_ents=with_ents, store=store)
         
         else:
             output = 'Not an ACP'

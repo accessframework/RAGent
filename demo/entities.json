@@ -1,12 +1,33 @@
 {
     "subject": [
         "hotcrp.com",
-        "site's manager",
+        "manager",
         "site manager",
         "program chair",
         "request",
         "user",
         "you"
+    ],
+    "action": [
+        "handle",
+        "own",
+        "broker",
+        "store",
+        "view",
+        "distribute",
+        "process",
+        "control",
+        "share",
+        "publicize",
+        "request",
+        "delete",
+        "direct",
+        "gain",
+        "update",
+        "create",
+        "modify",
+        "access",
+        "analyze"
     ],
     "resource": [
         "artifact",

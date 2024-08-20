@@ -14,3 +14,4 @@ evaluate
 scikit-learn
 wheel
 flash-attn
+langchain

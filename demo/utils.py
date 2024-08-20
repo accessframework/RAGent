@@ -5,6 +5,10 @@ import ast
 import re
 import json
 from enum import Enum
+from langchain_core.documents import Document
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import FAISS
 
 
 ID2AUGS = {0: 'allow_deny',
@@ -85,7 +89,7 @@ ACP: [{'decision': 'allow', 'subject': 'doctor', 'action': 'read', 'resource': '
 \n\n
 """
 
-INSTRUCTION_ENTS = f"{ACP_DEFN}\nGiven a natural language sentence (i.e., NLACP), generate an access control policy according to the above Access Control Policy Definition.\nIf a value for any key in any python dictionary is cannot be found in the NLACP, set the value to 'none'.\nTo identify subject, resource, purpose, and condition, use the entities provided as a dictionary, 'Available entities' as an aid.\nIf none of the provided Available entities match the entities of the NLACP or there is no 'Available entities' provided, use your judgment to select the most suitable entity within the NLACP\nDo not use values in a different list as values for the keys subject, resource, purpose, and condition of the dictioaries represent access control rules (i.e., Do not use values available for 'resource' as 'subject' in in the access control policy, if it is not listed as an available 'subject').\n"
+INSTRUCTION_ENTS = f"{ACP_DEFN}\nGiven a natural language sentence (i.e., NLACP), generate an access control policy according to the above Access Control Policy Definition.\nIf a value for any key in any python dictionary is cannot be found in the NLACP, set the value to 'none'.\nTo identify subject, action, resource, purpose, and condition, use the entities provided as a dictionary, 'Available entities' as an aid.\nIf none of the provided Available entities match the entities of the NLACP or there is no 'Available entities' provided, use your judgment to select the most suitable entity within the NLACP\nDo not use values in a different list as values for the keys subject, action, resource, purpose, and condition of the dictioaries represent access control rules (i.e., Do not use values available for 'resource' as 'subject' in in the access control policy, if it is not listed as an available 'subject').\n"
 
 basic_template = "{subject} is {decision} {action} {resource}"
 basic_template_subject = "{subject} is {decision} {action}"
@@ -98,15 +102,52 @@ sarcp_template = "{template} for the purpose of {purpose}, if {condition}"
 allow_sents = ['allowed to', 'able to', 'shall', 'authorized to']
 deny_sents = ['prohibited to', 'not able to', 'shall not', 'unauthorized to']
 
+def get_candidates(store, sentence,k=5):
+    l = []
+    docs = store.similarity_search(sentence,k=k)
+    for d in docs:
+        l.append(d.page_content)
+        
+    return l
 
-def get_generation_msgs_ents(nlacp, with_ents = True, ent_file=None):
-    if ent_file == None:
-        with_ents = False
-    else:
-        with open(ent_file, 'r') as f:
-            ents = json.load(f)
+def get_available_entities(query, store, n=5):
+    
+    entities = {'subject': [], 'action': [], 'resource': [], 'purpose': [], 'condition': []}
+    for key in entities:
+        entities[key] = get_candidates(store[key], query, k=n)
+
+    return entities
+
+def create_vectorstores(ent_file, save=False):
+    
+    embeddings = HuggingFaceEmbeddings(model_name="mixedbread-ai/mxbai-embed-large-v1",
+                                   model_kwargs={'device':"cuda", "trust_remote_code": True})
+    stores = {}
+    
+    with open(ent_file, 'r') as f:
+        ents = json.load(f)
+        
+    for k,v in ents.items():
+        docs = []
+        for i,e in enumerate(v):
+            vd = Document(page_content=e, metadata = {'source': k, 'seq_num': i+1})
+            docs.append(vd)
+        text_splitter  = RecursiveCharacterTextSplitter(chunk_size=100,chunk_overlap=0)
+        text_chunks = text_splitter.split_documents(docs)
+        
+        vector_store = FAISS.from_documents(text_chunks,embeddings)
+        if save:
+            vector_store.save_local(f'vectorstores/{k}_index')
             
-    if with_ents:
+        stores[k] = vector_store
+        
+    return stores
+
+
+def get_generation_msgs_ents(nlacp, with_ents = True, store=None):
+            
+    if with_ents and store!=None:
+        ents = get_available_entities(nlacp, store)
         user_msg = f"NLACP: {nlacp}\nAvailable entities: {ents}"
     else:
         user_msg = f"NLACP: {nlacp}"
@@ -260,7 +301,7 @@ def prepare_inputs_bart(s,l,tokenizer, device = 'cuda:0'):
     return {k:v.to(device) for k,v in tokens.items()}
 
 
-def generate(nlacp, tokenizer, model, with_ents = True, ent_file=None):
+def generate(nlacp, tokenizer, model, with_ents = True, store=None):
     
     terminators = [
         60, # ]
@@ -271,7 +312,7 @@ def generate(nlacp, tokenizer, model, with_ents = True, ent_file=None):
         tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
 
-    messages = get_generation_msgs_ents(nlacp, with_ents, ent_file)
+    messages = get_generation_msgs_ents(nlacp, with_ents, store)
         
     input_ids = tokenizer.apply_chat_template(
         messages,
@@ -392,7 +433,7 @@ def is_nlacp(input, id_model, id_tokenizer):
     
 
 
-def generate_policy(id, input, gen_model, gen_tokenizer, ver_model, ver_tokenizer, with_ents = True, ent_file=None):
+def generate_policy(id, input, gen_model, gen_tokenizer, ver_model, ver_tokenizer, with_ents = True, store=None):
 
     input = input.replace('\u2019s',"")
     
@@ -400,7 +441,7 @@ def generate_policy(id, input, gen_model, gen_tokenizer, ver_model, ver_tokenize
     mprob = 1.0
     max_tries = 0
     status = []
-    pred_pol = generate(input, gen_tokenizer, gen_model, with_ents=with_ents, ent_file=ent_file)
+    pred_pol = generate(input, gen_tokenizer, gen_model, with_ents=with_ents, store=store)
 
     if pred_pol == []:
         error_class = 10

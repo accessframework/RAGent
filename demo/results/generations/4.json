@@ -1,0 +1,87 @@
+[
+    {
+        "nlacp": "The HotCRP.com service handles the submission and review of artifacts, such as scientific and engineering publications."
+    },
+    {
+        "iteration": 0,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "mrules"
+    },
+    {
+        "iteration": 1,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "paper",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "cres"
+    },
+    {
+        "iteration": 2,
+        "pred": [
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "submission",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "review",
+                "condition": "none",
+                "purpose": "none"
+            },
+            {
+                "decision": "allow",
+                "subject": "hotcrp.com",
+                "action": "handle",
+                "resource": "artifact",
+                "condition": "none",
+                "purpose": "none"
+            }
+        ],
+        "verification": "correct"
+    }
+]

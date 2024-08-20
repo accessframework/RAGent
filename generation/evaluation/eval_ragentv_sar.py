@@ -1,19 +1,17 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 import torch
 from tqdm import tqdm
 import ast
 import json
 import pandas as pd
-from utils import process_label, get_available_entities, load_vectorstores, convert_to_sent, prepare_inputs_bart, get_srls, update
+from utils import process_label, load_vectorstores, update
 from generation_utils import generate_step, generate_llm
-import re
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer, set_seed
 from peft import PeftModel
 from pathlib import Path
 from srl_results_sar import SRLEvalSAR
 import click
-CACHE = "/data/sjay950/huggingface/"
 
 VECTORSTORES = load_vectorstores()
 MAX_TRIES = 10
@@ -113,14 +111,13 @@ def main(mode, result_dir, use_pipe):
     model_kwargs = dict(
         trust_remote_code=True,
         attn_implementation="flash_attention_2",  # loading the model with flash-attenstion support
-        torch_dtype=torch.bfloat16,
-        cache_dir = CACHE
+        torch_dtype=torch.bfloat16
     )
     base_model = AutoModelForCausalLM.from_pretrained(GEN_MODEL, **model_kwargs)
 
     gen_model = PeftModel.from_pretrained(base_model, gen_ckpt).to('cuda:0')
 
-    gen_tokenizer = AutoTokenizer.from_pretrained(GEN_MODEL, use_fast=True, cache_dir=CACHE)
+    gen_tokenizer = AutoTokenizer.from_pretrained(GEN_MODEL, use_fast=True)
     gen_tokenizer.pad_token = gen_tokenizer.eos_token
     gen_tokenizer.padding_side = 'left'
     
