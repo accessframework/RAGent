@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '7'
 import torch
 from transformers import (
     AutoTokenizer,

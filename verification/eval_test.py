@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from tqdm import tqdm
@@ -7,7 +6,6 @@ from sklearn.metrics import classification_report, matthews_corrcoef
 from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
-import click
 from utils import prepare_inputs_bart
 
 
@@ -66,13 +64,7 @@ def eval_ckpt(df, ckpt):
     print("=="*50)
     print()
     
-@click.command()
-@click.option('--ckpt', 
-       help='Checkpoint location',
-       default=9400,
-       show_default=True
-       )
-def main(ckpt):
+def main():
 
     df = pd.read_csv('../data/verification/verification_dataset_json_sent.csv')
     
@@ -80,7 +72,7 @@ def main(ckpt):
     _, VAL_DF = train_test_split(df, test_size=0.2, random_state=1)
     VAL_DF, TEST_DF = train_test_split(VAL_DF, test_size=0.5, random_state=1)
     
-    eval_ckpt(TEST_DF, ckpt)
+    eval_ckpt(TEST_DF, "../checkpoints/verification/checkpoint")
     
     
 if __name__ == '__main__':

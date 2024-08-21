@@ -175,7 +175,7 @@ def main(gt, pred, calculate_component_f1 = True):
 
 if __name__=='__main__':
     
-    fire.Fire(main)
+    main()
 
 
     

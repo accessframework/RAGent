@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 import torch
 from tqdm import tqdm
 import ast
@@ -89,8 +88,10 @@ def generate_refine(mode, df, gen_model, gen_tokenizer, save_generations=True, u
               help='Directory to save evaluation results',
               show_default=True,
               )
-@click.option('--use_pipe', is_flag=True)
+@click.option('--use_pipe', is_flag=True, help='Whether or not the transformers pipeline to use for generation')
 def main(mode, result_dir, use_pipe):
+    
+    """Evaluates RAGent in SAR setting."""
     
     set_seed(1)
     

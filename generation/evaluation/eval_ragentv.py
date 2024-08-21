@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 import torch
 from tqdm import tqdm
 import ast
@@ -160,11 +159,13 @@ def generate_refine(mode, df, gen_model, gen_tokenizer, ver_model, ver_tokenizer
               help='Number of entities to retrieve per each component',
               show_default=True,
               )
-@click.option('--refine', is_flag=True)
-@click.option('--no_retrieve', is_flag=True)
-@click.option('--no_update', is_flag=True)
-@click.option('--use_pipe', is_flag=True)
+@click.option('--refine', is_flag=True, help="Whether to conduct the verification and iterative refinement")
+@click.option('--no_retrieve', is_flag=True, help='Whether to retrieve information')
+@click.option('--no_update', is_flag=True, help="Whether to conduct the post-processing with retrieved information")
+@click.option('--use_pipe', is_flag=True, help='Whether or not the transformers pipeline to use for generation')
 def main(mode, result_dir, n, refine, no_retrieve, no_update, use_pipe):
+    
+    """Evaluates RAGent in DSARCP setting."""
     
     set_seed(1)
     

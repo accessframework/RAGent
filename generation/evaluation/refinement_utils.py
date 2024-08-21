@@ -16,10 +16,6 @@ def verify(nlacp, pred_pol, ver_model, ver_tokenizer):
 
 def get_refined_policy(instruction, pipe, tokenizer):
     terminators_errors = [
-        # 827,
-        # # 198,  # \n
-        # 933,  # ]\n
-        # 2595, # ]\n\n
         tokenizer.eos_token_id,
         tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]

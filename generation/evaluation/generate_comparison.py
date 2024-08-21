@@ -1,4 +1,3 @@
-import json
 from tabulate import tabulate
 from srl_results_sar import SRLEvalSAR, file_reader
 

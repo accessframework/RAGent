@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '7'
 import torch
 from transformers import (
     AutoTokenizer,
@@ -173,17 +172,8 @@ def train_verifier(ds_path, id2augs, batch_size = 16, learning_rate = 2e-5,
         
     with open('kfold_results.json','w') as f:
         json.dump(results, f)
-    
-
-    
 
 @click.command()
-@click.option('--base_model', 
-       help='Base model',
-       type=click.Choice(['bart', 'deberta'], case_sensitive=False),
-       default='bart',
-       show_default=True
-       )
 @click.option('--dataset_path', 
               help='Location of the generated verification dataset',
               default="../data/verification/verification_dataset_json_sent.csv",
@@ -193,10 +183,11 @@ def train_verifier(ds_path, id2augs, batch_size = 16, learning_rate = 2e-5,
 @click.option('--learning_rate', default=2e-5, help='Learning rate',show_default=True)
 @click.option('--batch_size', default=8, help='Batch size',show_default=True)
 @click.option('--out_dir', default='../checkpoints/verification_json/bart/sent_kfold', help='Output directory',show_default=True)
-def main(base_model, dataset_path, batch_size = 16, learning_rate = 2e-5, train_epochs = 10, 
-                   out_dir = 'checkpoints/bart_bin'):
+@click.option('--k', default=3, help='Number of splits',show_default=True)
+def main(dataset_path, batch_size = 16, learning_rate = 2e-5, train_epochs = 10, 
+                   out_dir = 'checkpoints/bart_bin', k = 3):
     
-    """Trains the access control policy verifier using multiple random train, val, test splits"""
+    """Trains and tests the access control policy verifier using multiple random train, validation, test splits"""
     
     ID2AUGS = {0: 'allow_deny',
                 1: 'csub',
@@ -212,10 +203,10 @@ def main(base_model, dataset_path, batch_size = 16, learning_rate = 2e-5, train_
                 11: 'correct'}
     
     print('\n =========================== Training details =========================== \n')
-    print(f'Base model: {base_model}\nDataset: {dataset_path}\nNum. of classes: {len(ID2AUGS)}\nNum. of epochs: {train_epochs}\nLearning rate: {learning_rate}\nBatch size: {batch_size}\nCheckpoint dir.: {out_dir}\n')
+    print(f'Base model: BART\nDataset: {dataset_path}\nNum. of classes: {len(ID2AUGS)}\nNum. of epochs: {train_epochs}\nLearning rate: {learning_rate}\nBatch size: {batch_size}\nCheckpoint dir.: {out_dir}\n')
     print(' ======================================================================= \n')
 
-    train_verifier(ds_path=dataset_path, id2augs=ID2AUGS, batch_size = batch_size, learning_rate = learning_rate, train_epochs=train_epochs, ckpt_dir = out_dir)
+    train_verifier(ds_path=dataset_path, id2augs=ID2AUGS, batch_size = batch_size, learning_rate = learning_rate, train_epochs=train_epochs, ckpt_dir = out_dir, k=k)
     
 
 if __name__ == '__main__':
