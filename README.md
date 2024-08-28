@@ -4,7 +4,7 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/>
 </a> -->
 
-Code repository for the paper "RAGent: Retrieval-based Access Control Policy Generation". RAGentV is a framework developed to using language models and large language models to,
+Code repository for the paper "RAGent: Retrieval-based Access Control Policy Generation". RAGent is an access control policy generation framework developed by using language models and large language models to,
 
 * Identify natural languge policies (NLACPs) from high-level requirement specification documents of an organization (using [BERT LM](https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertModel))
 * Retrieves organization-specific information (e.g., subjects, actions, resources, purposes, and conditions) pre-defined in the system that is relevant to translate the NLACPs via dense retrieval.
