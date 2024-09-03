@@ -4,7 +4,7 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/>
 </a> -->
 
-Code repository for the paper "RAGentV: Retrieval-based Access Control Policy Generation". RAGentV is a framework developed to using language models and large language models to,
+Code repository for the paper "RAGent: Retrieval-based Access Control Policy Generation". RAGent is an access control policy generation framework developed by using language models and large language models to,
 
 * Identify natural languge policies (NLACPs) from high-level requirement specification documents of an organization (using [BERT LM](https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertModel))
 * Retrieves organization-specific information (e.g., subjects, actions, resources, purposes, and conditions) pre-defined in the system that is relevant to translate the NLACPs via dense retrieval.
@@ -13,7 +13,7 @@ Code repository for the paper "RAGentV: Retrieval-based Access Control Policy Ge
 * Based on the verification result, iteratively refines the incorrect policy maximum ```n``` times until the verification result indicates **correct**.
 * Even after ```n``` rounds, if the verifier still finds the policy is incorrect, it will be sent back to the administrator for manual refinement before applying it to the authorization system.
 
-By developing this framework we improves the reliability of automated policy generation process and, in turn, reduce the data breaches due to access control failures in the future.
+By developing this framework, we improve the reliability of the automated policy generation process and, in turn, reduce the data breaches due to access control failures in the future.
 
 <img src="images/ragentv.png" align="middle" width="100%">
 
@@ -28,7 +28,7 @@ $ gdown --folder https://drive.google.com/drive/folders/1-kcQZEEU0ZMcH7PakNSF-87
 $ cd RAGent/demo
 $ ./demo.sh
 ```
-The results including the final generations and intermediate generations if the refinement is involved will be saved in the ```demo``` directory.
+The results, including the final generations and intermediate generations if the refinement is involved, will be saved in the ```demo``` directory.
 
 ## Setup
 ### Installation
@@ -47,7 +47,7 @@ Install the dependencies
 $ pip install -r requirements.txt
 ```
 
-> NOTE : All the parts of the framework were only tested on Ubuntu machine with NVIDIA A100-SXM4-80GB GPU and 1007G memory. 
+> NOTE : All the parts of the framework were only tested on a Ubuntu machine with NVIDIA A100-SXM4-80GB GPU and 1007G memory. 
 
 ### Checkpoints
 
@@ -89,9 +89,9 @@ When evaluating the proposed framework's ability to generate structured represen
 
 1. **Access control policy component extraction**: Evaluating its ability to extract policy components from NLACPs
     * SAR : Extracting subjects and resources for each action (to compare with previous research as they cannot extract any other components)
-    * DSARCP : By going beyond all the existing frameworks, extracting access decision, subjects, resources, purposes, and conditions for each action
+    * DSARCP : By going beyond all the existing frameworks, extracting access decisions, subjects, resources, purposes, and conditions for each action
 
-2. **Access control rule generation**: Evaluating its ability to generate ACRs directly from NLACPs (NOTE: Each ACR should contain its own access decision (which is not considered in existing frameworks), subject, action, resource, purpose and condition)
+2. **Access control rule generation**: Evaluating its ability to generate ACRs directly from NLACPs (NOTE: Each ACR should contain its own access decision (which is not considered in existing frameworks), subject, action, resource, purpose, and condition)
 
 #### SAR Evaluation
 
@@ -191,7 +191,7 @@ Options:
 
 <!-- >NOTE: This step is carried out to check the ability of BART to verify policies after fine-tuning. Not to create the final verifier model. 
 
-After making sure that the BART can be used as an accurate verifier, BART can be trained and tested using a single random split through the follwoing command. This trained model will act as the verifier in RAGent when verifying policies to refine them iteratively.
+After making sure that the BART can be used as an accurate verifier, BART can be trained and tested using a single random split through the following command. This trained model will act as the verifier in RAGent when verifying policies to refine them iteratively.
 
 ```
 $ python train_test_verifier_single_split.py
@@ -219,7 +219,7 @@ Next we will see how to train each component of our proposed framework with your
 
 ### NLACP Identification
 
-To fine-tune BERT with your own data to identify NLACPs, run the follwoing commands,
+To fine-tune BERT with your own data to identify NLACPs, run the following commands,
 
 ```bash
 $ cd identification/
@@ -270,7 +270,7 @@ Options:
 
 ### Access control policy verification
 
-As mentioned in the [verifier inference](#access-control-policy-verification), verifier can be trained and tested using the following command.
+As mentioned in the [verifier inference](#access-control-policy-verification), the verifier can be trained and tested using the following command.
 
 ```bash
 $ cd verification/
