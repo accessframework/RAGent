@@ -3,7 +3,6 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from tqdm import tqdm
 from sklearn.metrics import classification_report, matthews_corrcoef
-from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
 from utils import prepare_inputs_bart
@@ -52,8 +51,6 @@ def eval_ckpt(df, ckpt):
         else:
             preds_bin.append(1)
 
-
-    print(f"ID: {id}\n")
     print(
         classification_report(truth_bin, preds_bin, target_names=["negative", "positive"])
     )
@@ -65,14 +62,11 @@ def eval_ckpt(df, ckpt):
     print()
     
 def main():
+    
 
-    df = pd.read_csv('../data/verification/verification_dataset_json_sent.csv')
+    df = pd.read_csv('../data/verification/utest.csv')
     
-    # Using the sane splits with random state used when training
-    _, VAL_DF = train_test_split(df, test_size=0.2, random_state=1)
-    VAL_DF, TEST_DF = train_test_split(VAL_DF, test_size=0.5, random_state=1)
-    
-    eval_ckpt(TEST_DF, "../checkpoints/verification/checkpoint")
+    eval_ckpt(df, "../checkpoints/verification/checkpoint")
     
     
 if __name__ == '__main__':

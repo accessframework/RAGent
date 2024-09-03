@@ -1,4 +1,4 @@
-# RAGentV: Retrieval-based Access Control Policy Generation
+# RAGentV: Retrieval-based Access Control Policy Generation (Unparallelized)
 
 <!-- Demo  <a target="_blank" href="https://colab.research.google.com/drive/1QlG_XXEvTwejCHDaUQSDMkoQWBKNn97d">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/>
@@ -23,6 +23,8 @@ The provided demo with HotCRP privacy policies can be run in the terminal using 
 
 ```bash
 $ git clone https://github.com/accessframework/RAGent.git
+$ pip install gdown
+$ gdown --folder https://drive.google.com/drive/folders/1-kcQZEEU0ZMcH7PakNSF-87YiqY9A8Xx
 $ cd RAGent/demo
 $ ./demo.sh
 ```
@@ -166,45 +168,46 @@ After running the above command it will result in two F1 scores, one showing the
 
 ### Access control policy verification
 
-To train and evaluate the BART model across multiple random train, validation, and test sets run the following.
+To train and evaluate the BART model across train, validation, and test sets run the following.
 
 ```
-$ python train_test_verifier_multi_split.py
-```
-Options:
-```
-$ python train_test_verifier_multi_split.py --help
-Usage: train_test_verifier_multi_split.py [OPTIONS]
+$ python train_test_verifier_single_split.py --help
+Usage: train_test_verifier_single_split.py [OPTIONS]
 
-  Trains and tests the access control policy verifier using multiple random
-  train, validation, test splits
+  Trains the access control policy verifier using a single random train, val,
+  test splits
 
 Options:
-  --dataset_path TEXT     Location of the generated verification dataset
-                          [default: ../data/verification/verification_dataset_
-                          json_sent.csv; required]
-  --train_epochs INTEGER  Number of epochs to train  [default: 10]
-  --learning_rate FLOAT   Learning rate  [default: 2e-05]
-  --batch_size INTEGER    Batch size  [default: 8]
-  --out_dir TEXT          Output directory  [default:
-                          ../checkpoints/verification_json/bart/sent_kfold]
-  --k INTEGER             Number of splits  [default: 3]
-  --help                  Show this message and exit.
+  --base_model [bart|deberta]  Base model  [default: bart]
+  --dataset_path TEXT          Directory generated verification datasets
+                               [default: ../data/verification; required]
+  --train_epochs INTEGER       Number of epochs to train  [default: 10]
+  --learning_rate FLOAT        Learning rate  [default: 2e-05]
+  --batch_size INTEGER         Batch size  [default: 8]
+  --out_dir TEXT               Output directory  [default:
+                               ../checkpoints/verification]
+  --help                       Show this message and exit.
 ```
 
->NOTE: This step is carried out to check the ability of BART to verify policies after fine-tuning. Not to create the final verifier model. We used the results of this approach in the paper to show that the BART is effective in verification.
+<!-- >NOTE: This step is carried out to check the ability of BART to verify policies after fine-tuning. Not to create the final verifier model. 
 
 After making sure that the BART can be used as an accurate verifier, BART can be trained and tested using a single random split through the follwoing command. This trained model will act as the verifier in RAGent when verifying policies to refine them iteratively.
 
 ```
 $ python train_test_verifier_single_split.py
-```
+``` -->
 
-To only run the evaluation of the provided checkpoint in ```checkpoints/verification``` directory, run the following command.
+To reproduce the results reported in the paper, run the follwoing command.
 
 ```
 $ python eval_test.py
 ```
+
+<!-- To only run the evaluation of the provided checkpoint in ```checkpoints/verification``` directory, run the following command.
+
+```
+$ python eval_test.py
+``` -->
 
 The final test results can be found in ```verification/results/final_test_result.txt```
 
@@ -266,30 +269,6 @@ Options:
 ```
 
 ### Access control policy verification
-
-<!-- Before training the verifier, we first need to create the dataset using the techniques mentioned in the paper. To do that run the following command,
-
-```bash
-$ cd verification/dataset/
-$ python verification_dataset.py [OPTIONS]
-```
-
-with options,
-
-```
-Usage: verification_dataset.py [OPTIONS]
-
-  Generates the verification dataset
-
-Options:
-  --dataset_path TEXT  Location of the train dataset used to train the generator  [default: ../../data/overall/train.csv; required]
-  --model TEXT         Generation model checkpoint  [default: ../../checkpoints/generation/overall/checkpoint; required]
-  --num_beams INTEGER  Number of beams  [default: 5]
-  --device TEXT        GPU/CPU  [default: cuda:0]
-  --save_name TEXT     Name of the final dataset  [default: verification_dataset.csv]
-```
-
-After the dataset is generated, verifier can be trained using the following command, -->
 
 As mentioned in the [verifier inference](#access-control-policy-verification), verifier can be trained and tested using the following command.
 

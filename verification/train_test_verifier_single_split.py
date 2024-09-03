@@ -123,12 +123,10 @@ def train_test_verifier(fold, id2augs, batch_size = 16, learning_rate = 2e-5, tr
         tokenizer=tokenizer,
         compute_metrics=compute_metrics,
         preprocess_logits_for_metrics=preprocess_logits_for_metrics_bart,
-        # callbacks=[EarlyStoppingCallback(6)]
     )
 
     trainer.train()
     
-    # print(f"> Evaluating :: Fold {id+1}\n")
     testing_results = trainer.evaluate(test_ds, metric_key_prefix='test')
     
     ckpts = [name for name in os.listdir(ckpt_dir)]
@@ -143,12 +141,9 @@ def train_verifier(ds_path, id2augs, batch_size = 16, learning_rate = 2e-5,
                    train_epochs =10, ckpt_dir = 'checkpoints/bart'
                    ):
     
-    results = {}
-    DF = pd.read_csv(ds_path)
-    
-    # TRAIN_DF, TEST_DF = train_test_split(DF, test_size=0.1, random_state=1)
-    TRAIN_DF, VAL_DF = train_test_split(DF, test_size=0.2, random_state=1)
-    VAL_DF, TEST_DF = train_test_split(VAL_DF, test_size=0.5, random_state=1)
+    TRAIN_DF = pd.read_csv(f'{ds_path}/utrain.csv')
+    TEST_DF = pd.read_csv(f'{ds_path}/utest.csv')
+    VAL_DF = pd.read_csv(f'{ds_path}/uval.csv')
     
     fold = {
         'train': TRAIN_DF,
@@ -173,14 +168,14 @@ def train_verifier(ds_path, id2augs, batch_size = 16, learning_rate = 2e-5,
        show_default=True
        )
 @click.option('--dataset_path', 
-              help='Location of the generated verification dataset',
-              default="../data/verification/verification_dataset_json_sent.csv",
+              help='Directory generated verification datasets',
+              default="../data/verification",
               show_default=True,
               required=True)
 @click.option('--train_epochs', default=10, help='Number of epochs to train',show_default=True)
 @click.option('--learning_rate', default=2e-5, help='Learning rate',show_default=True)
 @click.option('--batch_size', default=8, help='Batch size',show_default=True)
-@click.option('--out_dir', default='../checkpoints/verification_json/bart/sent_new', help='Output directory',show_default=True)
+@click.option('--out_dir', default='../checkpoints/verification', help='Output directory',show_default=True)
 def main(base_model, dataset_path, batch_size = 16, learning_rate = 2e-5, train_epochs = 10, 
                    out_dir = 'checkpoints/bart_bin'):
     
