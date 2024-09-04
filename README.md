@@ -1,9 +1,5 @@
 # RAGentV: Retrieval-based Access Control Policy Generation (Unparallelized)
 
-<!-- Demo  <a target="_blank" href="https://colab.research.google.com/drive/1QlG_XXEvTwejCHDaUQSDMkoQWBKNn97d">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/>
-</a> -->
-
 Code repository for the paper "RAGent: Retrieval-based Access Control Policy Generation". RAGent is an access control policy generation framework developed by using language models and large language models to,
 
 * Identify natural languge policies (NLACPs) from high-level requirement specification documents of an organization (using [BERT LM](https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertModel))
@@ -170,6 +166,12 @@ After running the above command it will result in two F1 scores, one showing the
 
 To train and evaluate the BART model across train, validation, and test sets run the following.
 
+```bash
+$ cd verification/
+$ python train_test_verifier_single_split.py
+```
+
+Options:
 ```
 $ python train_test_verifier_single_split.py --help
 Usage: train_test_verifier_single_split.py [OPTIONS]
@@ -178,7 +180,6 @@ Usage: train_test_verifier_single_split.py [OPTIONS]
   test splits
 
 Options:
-  --base_model [bart|deberta]  Base model  [default: bart]
   --dataset_path TEXT          Directory generated verification datasets
                                [default: ../data/verification; required]
   --train_epochs INTEGER       Number of epochs to train  [default: 10]
@@ -189,25 +190,11 @@ Options:
   --help                       Show this message and exit.
 ```
 
-<!-- >NOTE: This step is carried out to check the ability of BART to verify policies after fine-tuning. Not to create the final verifier model. 
-
-After making sure that the BART can be used as an accurate verifier, BART can be trained and tested using a single random split through the following command. This trained model will act as the verifier in RAGent when verifying policies to refine them iteratively.
-
-```
-$ python train_test_verifier_single_split.py
-``` -->
-
 To reproduce the results reported in the paper, run the follwoing command.
 
 ```
 $ python eval_test.py
 ```
-
-<!-- To only run the evaluation of the provided checkpoint in ```checkpoints/verification``` directory, run the following command.
-
-```
-$ python eval_test.py
-``` -->
 
 The final test results can be found in ```verification/results/final_test_result.txt```
 
